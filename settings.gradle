@@ -1,0 +1,12 @@
+rootProject.name = 'spawners'
+
+dependencyResolutionManagement {
+    repositoriesMode = RepositoriesMode.PREFER_SETTINGS
+    repositories {
+        mavenCentral()
+        maven {
+            url = 'https://repo.papermc.io/repository/maven-public/'
+            name = 'papermc'
+        }
+    }
+}

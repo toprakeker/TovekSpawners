@@ -1,0 +1,35 @@
+plugins {
+    id 'java-library'
+}
+
+group = 'dev.toprak'
+version = '1.0.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+dependencies {
+    compileOnly 'io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+tasks.named('jar') {
+    archiveFileName = "TovekSpawners-${project.version}.jar"
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+    manifest {
+        attributes(
+            'Implementation-Title': 'TovekSpawners',
+            'Implementation-Version': project.version,
+            'Implementation-Vendor': 'Toprak'
+        )
+    }
+}

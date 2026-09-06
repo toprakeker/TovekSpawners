@@ -1,0 +1,13 @@
+# TovekSpawners configuration
+max-stack-size: 50
+require-silk-touch: true
+
+# Minimum pickaxe tier required for silk mining: WOODEN, STONE, IRON, DIAMOND, NETHERITE
+minimum-pickaxe-tier: "DIAMOND"
+
+messages:
+  mined: "<green>You mined a <gold>%entity% Spawner</gold>!</green>"
+  mined-stack: "<green>You mined 1x from <gold>%entity% Spawner</gold> (%remaining% left in stack).</green>"
+  stacked: "<green>Stacked! <gold>%entity% Spawner</gold> is now <yellow><bold>x%count%</bold></yellow>!</green>"
+  max-stacked: "<red>This spawner has already reached the maximum stack size (%max%).</red>"
+  need-silk-touch: "<red>You need a Silk Touch %tier%+ pickaxe to mine this spawner!</red>"
