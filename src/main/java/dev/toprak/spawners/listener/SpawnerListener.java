@@ -83,6 +83,7 @@ public class SpawnerListener implements Listener {
         boolean hasSilk = tool.containsEnchantment(Enchantment.SILK_TOUCH);
 
         if (requireSilk && !hasSilk) {
+            player.sendMessage(mm.deserialize("<red>You need Silk Touch to mine this spawner!</red>"));
             return;
         }
 
