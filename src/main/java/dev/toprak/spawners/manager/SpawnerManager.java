@@ -49,14 +49,16 @@ public class SpawnerManager {
 
     public EntityType getEntityTypeFromItem(ItemStack item) {
         if (item == null || item.getType() != Material.SPAWNER) return null;
-        if (item.getItemMeta() instanceof BlockStateMeta bsm && bsm.getBlockState() instanceof CreatureSpawner cs) {
+        if (item.getItemMeta() instanceof BlockStateMeta bsm) {
             String pEntity = bsm.getPersistentDataContainer().get(entityKey, PersistentDataType.STRING);
             if (pEntity != null) {
                 try {
                     return EntityType.valueOf(pEntity.toUpperCase());
                 } catch (IllegalArgumentException ignored) {}
             }
-            return cs.getSpawnedType();
+            if (bsm.getBlockState() instanceof CreatureSpawner cs) {
+                return cs.getSpawnedType();
+            }
         }
         return null;
     }
