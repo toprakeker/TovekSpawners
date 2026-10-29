@@ -1,7 +1,7 @@
 name: TovekSpawners
-version: 1.0.1
+version: 1.0.2
 main: dev.toprak.spawners.SpawnersPlugin
-api-version: '1.21'
+api-version: '1.20'
 author: Toprak
 description: Lag-free Silk Touch spawner harvesting and stacking engine for Paper 1.21+.
 
