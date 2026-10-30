@@ -4,7 +4,7 @@
 
 [![Platform](https://img.shields.io/badge/Platform-Paper%20%7C%20Purpur-F78C40?style=flat-square&logo=minecraft&logoColor=white)](https://papermc.io)
 [![Java](https://img.shields.io/badge/Java-21%2B-ED8B00?style=flat-square&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+[![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey?style=flat-square)](LICENSE)
 [![Version](https://img.shields.io/badge/Version-1.21.x-blue?style=flat-square)](https://papermc.io)
 
 **Lag-free Silk Touch spawner harvesting and stacking engine for Paper & Purpur 1.21+.**
@@ -51,3 +51,7 @@ Compiled jar will be located in `build/libs/`.
 ## License
 
 MIT License. Free for public server networks and modification.
+
+## License
+
+CC BY-NC-SA 4.0: free to use and modify with credit; no commercial use or selling; modified versions must be shared under the same license. See LICENSE.
