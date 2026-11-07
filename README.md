@@ -36,6 +36,10 @@
 
 ---
 
+## Security advisories
+
+- [TVSP-2026-001: build-denied placement can mutate a spawner stack](docs/security/TVSP-2026-001.md) — maintainer-authored advisory and source fix; no CVE or GHSA assigned.
+
 ## Building from Source
 
 ```bash

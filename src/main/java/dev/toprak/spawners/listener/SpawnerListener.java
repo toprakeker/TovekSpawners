@@ -34,6 +34,10 @@ public class SpawnerListener implements Listener {
 
     @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
     public void onPlace(BlockPlaceEvent event) {
+        // Build denial is independent of cancellation (for example, spawn protection).
+        // A rejected placement must never be converted into a stack mutation.
+        if (event.isCancelled() || !event.canBuild()) return;
+
         Block placed = event.getBlockPlaced();
         if (placed.getType() != Material.SPAWNER) return;
 
@@ -77,6 +81,7 @@ public class SpawnerListener implements Listener {
         // Fresh spawner: apply type + count once the placement has fully committed.
         EntityType finalType = itemType;
         plugin.getServer().getScheduler().runTask(plugin, () -> {
+            if (event.isCancelled() || !event.canBuild()) return;
             if (placed.getType() != Material.SPAWNER) return; // placement was reverted by a later handler
             if (placed.getState() instanceof CreatureSpawner cs) {
                 cs.setSpawnedType(finalType);
