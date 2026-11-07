@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'dev.toprak'
-version = '1.0.2'
+version = '1.0.3'
 
 java {
     toolchain {
@@ -14,6 +14,8 @@ java {
 dependencies {
     compileOnly 'io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
+    testImplementation 'io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT'
+    testImplementation 'org.mockito:mockito-core:5.14.2'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 

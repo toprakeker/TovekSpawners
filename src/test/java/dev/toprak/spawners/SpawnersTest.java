@@ -1,21 +1,14 @@
 package dev.toprak.spawners;
 
 import org.junit.jupiter.api.Test;
+import dev.toprak.spawners.manager.SpawnerManager;
 import static org.junit.jupiter.api.Assertions.*;
 
 class SpawnersTest {
 
     @Test
     void testFormatName() {
-        String name = "ZOMBIE_VILLAGER";
-        String[] parts = name.split("_");
-        StringBuilder sb = new StringBuilder();
-        for (String p : parts) {
-            sb.append(Character.toUpperCase(p.charAt(0)))
-              .append(p.substring(1).toLowerCase())
-              .append(" ");
-        }
-        assertEquals("Zombie Villager", sb.toString().trim());
+        assertEquals("Zombie Villager", SpawnerManager.formatName("ZOMBIE_VILLAGER"));
     }
 
     @Test
